@@ -1,0 +1,26 @@
+body {
+    background-color: #EEF1DA;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family: 'Playfair Display';
+}
+p {
+    text-decoration: none;
+    color: #979fd3;
+}
+a :link {
+    text-decoration: none;
+    color :black
+}
+a :visited {
+    text-decoration: none;
+    color :blue 
+}
+a :hover {
+    text-decoration: none;
+    color :cyan
+}
+
+.formatheader {
+    font-size: larger;
+}
