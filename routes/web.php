@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Link;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BlogController;
 
 Route::get('/publishfrontend', function () {
@@ -36,10 +37,12 @@ Route::get('/p7part2', function () {
 Route::get('/dosen', [Link::class,'index']);
 Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
 
-Route::get('/formulir', [PegawaiController::class, 'formulir']);
+Route::get('/formulir', [Pegawai2Controller::class, 'formulir']);
 Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
 
 
 Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
+
+Route::get('/pegawai', [PegawaiController::class, 'index']);
