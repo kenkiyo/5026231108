@@ -35,7 +35,7 @@ Route::get('/p7part2', function () {
 });
 
 Route::get('/dosen', [Link::class,'index']);
-Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
+//Route::get('/pegawai/{nama}', [PegawaiController::class, 'index']);
 
 Route::get('/formulir', [Pegawai2Controller::class, 'formulir']);
 Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
@@ -45,4 +45,11 @@ Route::get('/blog', [BlogController::class, 'home']);
 Route::get('/blog/tentang', [BlogController::class, 'tentang']);
 Route::get('/blog/kontak', [BlogController::class, 'kontak']);
 
+// CRUD Pegawai
 Route::get('/pegawai', [PegawaiController::class, 'index']);
+Route::get('/pegawai/tambah', [PegawaiController::class, 'tambah']);
+Route::get('/pegawai/edit/{id}', [PegawaiController::class, 'edit']);
+Route::post('/pegawai/store', [PegawaiController::class, 'store']);
+Route::post('/pegawai/update', [PegawaiController::class, 'update']);
+Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
+Route::get('/pegawai/cari', [PegawaiController::class, 'cari']);
