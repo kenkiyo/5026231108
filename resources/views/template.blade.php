@@ -3,57 +3,219 @@
 
 <head>
     <title>Muhammad Raihan Hassan : 5026231108</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
     <style>
-        .jumbotron {
-            background-color: #9de2e2;
-            height: 100px;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        :root {
+            --sand: #fff8e7;
+            --sky: #ccefff;
+            --ocean: #99ddff;
+            --wave: #66cfff;
+            --text: #22577a;
+            --hover: #bbf0ff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--sky);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: var(--sky);
+            color: var(--text);
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 3px 6px rgba(34, 87, 122, 0.15);
+            font-weight: 800;
+            font-size: 2em;
+            letter-spacing: 1.2px;
+        }
+
+        .header h1{
+            background-color: var(--sky);
+            color: var(--text);
+            padding: 1.5rem 0;
+            text-align: center;
+            font-weight: 800;
+            font-size: 2.5rem;
+            letter-spacing: 1.2px;
+        }
+
+        .header small {
+            color: var(--text);
+            font-weight: 500;
+
+        }
+
+        .navbar-custom {
+            background-color: var(--sand);
+            box-shadow: 0 2px 5px rgba(34, 87, 122, 0.1);
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
+
+        }
+
+        .navbar-custom .nav-link,
+        .navbar-custom .navbar-brand {
+            color: var(--text);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: var(--wave);
+            text-decoration: underline;
+        }
+
+        .container {
+            margin-top: 2rem;
+        }
+
+        table {
+    border-collapse: collapse; /* biar semua sel nyatu, bukan separate */
+    width: 100%;
+    background-color: var(--sand);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(34, 87, 122, 0.1);
+    overflow: hidden;
+    font-size: 1rem;
+    color: var(--text);
+    text-align: center; /* isi tabel rata tengah */
+    border: 1px solid var(--text); /* border luar tabel */
+}
+
+th {
+    background-color: var(--wave);
+    color: var(--sand);
+    font-weight: 700;
+    padding: 15px 20px;
+    user-select: none;
+    border: 1px solid var(--text); /* border antar header */
+}
+
+td {
+    padding: 14px 20px;
+    vertical-align: middle;
+    border: 1px solid var(--text); /* border antar cell */
+    font-weight: 500;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #e9faff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--sky);
+}
+
+tbody tr:hover {
+    background-color: var(--hover);
+    color: var(--text);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+        .btn {
+            border-radius: 6px;
+            font-weight: 600;
+            padding: 7px 14px;
+            font-size: 0.9rem;
+            box-shadow: none;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-success {
+            background-color: var(--wave);
+            color: var(--sand);
+            border: none;
+        }
+
+        .btn-success:hover {
+            background-color: var(--ocean);
+            box-shadow: 0 2px 8px rgba(102, 207, 255, 0.4);
+        }
+
+        .btn-danger {
+            background-color: #e57373;
+            color: var(--sand);
+            border: none;
+        }
+
+        .btn-danger:hover {
+            background-color: #ef5350;
+            box-shadow: 0 2px 8px rgba(239, 83, 80, 0.4);
+        }
+
+        .btn i {
+            font-size: 1.1rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding: 1rem;
+            text-align: center;
+            color: var(--text);
+            background-color: var(--sand);
+            font-weight: 500;
+            box-shadow: 0 -3px 6px rgba(34, 87, 122, 0.05);
         }
     </style>
 </head>
 
 <body>
-    <div class="jumbotron text-center mx-auto">
-        <h1>5026231108 : Muhammad Raihan Hassan</h1>
-    </div>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="mb-0">Muhammad Raihan Hassan  ||  5026231108</h1>
+        <small class="mb-0">Laravel CRUD Project</small>
+    </header>
 
-    <nav class="navbar navbar-expand-sm bg-light">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">All Front End</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/pegawai">Pegawai</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Tugas CRUD</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">EAS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 1</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 2</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Latihan 3</a>
-            </li>
-        </ul>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#">Tugas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="filter: invert(34%) sepia(67%) saturate(390%) hue-rotate(174deg) brightness(96%) contrast(88%);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="/publishfrontend" class="nav-link">All Frontend</a></li>
+                    <li class="nav-item"><a href="/pegawai" class="nav-link">Pegawai</a></li>
+                    <li class="nav-item"><a href="/sembako" class="nav-link">Tugas CRUD-Sembako</a></li>
+                    <li class="nav-item"><a href="/blog" class="nav-link">#</a></li>
+                    <li class="nav-item"><a href="/tugas" class="nav-link">#</a></li>
+                    <li class="nav-item"><a href="/latihan1" class="nav-link">#</a></li>
+                    <li class="nav-item"><a href="/latihan2" class="nav-link">#</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <br>
-    <div class="container">
-        @yield('content')
-    </div>
 
+    <!-- Main Content -->
+    <main class="container my-4">
+        @yield('content')
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Muhammad Raihan Hassan • All rights reserved.
+    </footer>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

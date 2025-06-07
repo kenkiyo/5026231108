@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-
 class PegawaiController extends Controller
 {
 	public function index()
@@ -15,7 +14,7 @@ class PegawaiController extends Controller
         $pegawai = DB::table('pegawai')->paginate(10);
         //echo $pegawai
     	// mengirim data pegawai ke view index
-		return view('index',['pegawai' => $pegawai]);
+		return view('pegawai.index',['pegawai' => $pegawai]);
 
 	}
 
@@ -24,7 +23,7 @@ class PegawaiController extends Controller
 	{
 
 		// memanggil view tambah
-		return view('tambah');
+		return view('pegawai.tambah');
 
 	}
 
@@ -49,7 +48,7 @@ class PegawaiController extends Controller
 		// mengambil data pegawai berdasarkan id yang dipilih
 		$pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
 		// passing data pegawai yang didapat ke view edit.blade.php
-		return view('edit',['pegawai' => $pegawai]);
+		return view('pegawai.edit',['pegawai' => $pegawai]);
 
 	}
 
@@ -91,7 +90,7 @@ class PegawaiController extends Controller
 		->paginate();
 
     		// mengirim data pegawai ke view index
-		return view('index',['pegawai' => $pegawai, 'cari'=> $cari]);
+		return view('pegawai.index',['pegawai' => $pegawai, 'cari'=> $cari]);
 
 	}
 

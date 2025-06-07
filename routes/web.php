@@ -5,6 +5,8 @@ use App\Http\Controllers\Link;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\SembakoController;
+
 
 Route::get('/publishfrontend', function () {
     return view('publishfrontend');
@@ -53,3 +55,12 @@ Route::post('/pegawai/store', [PegawaiController::class, 'store']);
 Route::post('/pegawai/update', [PegawaiController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiController::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiController::class, 'cari']);
+
+//CRUD Sembako
+Route::get('/sembako', [SembakoController::class, 'index']);
+Route::get('/sembako/tambah', [SembakoController::class, 'tambah']);
+Route::post('/sembako/store', [SembakoController::class, 'store']);
+Route::get('/sembako/edit/{id}', [SembakoController::class, 'edit']);
+Route::post('/sembako/update', [SembakoController::class, 'update']);
+Route::get('/sembako/hapus/{id}', [SembakoController::class, 'hapus']);
+Route::get('/sembako/cari', [SembakoController::class, 'cari']);
