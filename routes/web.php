@@ -6,6 +6,8 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\Pegawai2Controller;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SembakoController;
+use App\Http\Controllers\KaryawanController;
+
 
 
 Route::get('/publishfrontend', function () {
@@ -64,3 +66,10 @@ Route::get('/sembako/edit/{id}', [SembakoController::class, 'edit']);
 Route::post('/sembako/update', [SembakoController::class, 'update']);
 Route::get('/sembako/hapus/{id}', [SembakoController::class, 'hapus']);
 Route::get('/sembako/cari', [SembakoController::class, 'cari']);
+
+//CRUD Karyawan
+Route::get('/karyawan', [KaryawanController::class, 'index']);
+Route::get('/karyawan/tambah', [KaryawanController::class, 'tambah']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::get('/karyawan/hapus/{kodepegawai}', [KaryawanController::class, 'hapus']);
+

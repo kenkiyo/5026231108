@@ -195,7 +195,7 @@ tbody tr:hover {
                     <li class="nav-item"><a href="/publishfrontend" class="nav-link">All Frontend</a></li>
                     <li class="nav-item"><a href="/pegawai" class="nav-link">Pegawai</a></li>
                     <li class="nav-item"><a href="/sembako" class="nav-link">Tugas CRUD-Sembako</a></li>
-                    <li class="nav-item"><a href="/blog" class="nav-link">#</a></li>
+                    <li class="nav-item"><a href="/karyawan" class="nav-link">Latihan 1</a></li>
                     <li class="nav-item"><a href="/tugas" class="nav-link">#</a></li>
                     <li class="nav-item"><a href="/latihan1" class="nav-link">#</a></li>
                     <li class="nav-item"><a href="/latihan2" class="nav-link">#</a></li>

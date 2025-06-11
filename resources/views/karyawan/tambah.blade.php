@@ -1,0 +1,38 @@
+@extends('template')
+
+@section('content')
+<h3>Tambah Data Karyawan</h3>
+
+<a href="/karyawan" class="btn btn-info">Kembali</a>
+
+<br><br>
+
+<form action="/karyawan/store" method="post">
+    {{ csrf_field() }}
+    <div class="row mb-3">
+        <div class="col-3">Kode Pegawai</div>
+        <div class="col-8">
+            <input type="text" name="kodepegawai" required maxlength="5" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-3">Nama Lengkap</div>
+        <div class="col-8">
+            <input type="text" name="namalengkap" required maxlength="50" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-3">Divisi</div>
+        <div class="col-8">
+            <input type="text" name="divisi" required maxlength="5" class="form-control">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="col-3">Departemen</div>
+        <div class="col-8">
+            <input type="text" name="departemen" required maxlength="10" class="form-control">
+        </div>
+    </div>
+    <input type="submit" value="Simpan Data" class="btn btn-success">
+</form>
+@endsection
