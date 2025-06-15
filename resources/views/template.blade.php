@@ -58,10 +58,9 @@
         }
 
         .navbar-custom {
-            background-color: var(--sand);
-            box-shadow: 0 2px 5px rgba(34, 87, 122, 0.1);
-            padding-top: 0.4rem;
-            padding-bottom: 0.4rem;
+        background-color: var(--sand);
+        box-shadow: 0 2px 5px rgba(34, 87, 122, 0.1);
+        padding: 0.25rem 0;
 
         }
 
@@ -172,6 +171,28 @@ tbody tr:hover {
             font-weight: 500;
             box-shadow: 0 -3px 6px rgba(34, 87, 122, 0.05);
         }
+        .navbar-custom .nav-link {
+        padding: 8px 16px;
+        margin: 0 5px;
+        border-radius: 8px;
+        background-color: transparent;
+        border: 1px solid transparent;
+        transition: all 0.3s ease-in-out;
+        font-weight: 600;
+        white-space: nowrap; /* biar tombol tetap 1 baris */
+        }
+
+        .navbar-custom .nav-link:hover {
+            background-color: var(--hover);
+            border-color: var(--text);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            color: var(--text);
+        }
+
+        .navbar-nav .nav-item {
+            margin: 0 4px;
+        }
+
     </style>
 </head>
 
@@ -185,20 +206,34 @@ tbody tr:hover {
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm navbar-custom">
         <div class="container">
-            <a class="navbar-brand" href="#">Tugas</a>
+            <a class="navbar-brand fw-bold" href="#">TUGAS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon" style="filter: invert(34%) sepia(67%) saturate(390%) hue-rotate(174deg) brightness(96%) contrast(88%);"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a href="/publishfrontend" class="nav-link">All Frontend</a></li>
-                    <li class="nav-item"><a href="/pegawai" class="nav-link">Pegawai</a></li>
-                    <li class="nav-item"><a href="/sembako" class="nav-link">Tugas CRUD-Sembako</a></li>
-                    <li class="nav-item"><a href="/karyawan" class="nav-link">Latihan 1</a></li>
-                    <li class="nav-item"><a href="/tugas" class="nav-link">#</a></li>
-                    <li class="nav-item"><a href="/latihan1" class="nav-link">#</a></li>
-                    <li class="nav-item"><a href="/latihan2" class="nav-link">#</a></li>
+                <ul class="navbar-nav ms-auto nav-pills-custom">
+                    <li class="nav-item">
+                        <a href="/publishfrontend" class="nav-link">All Frontend</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/pegawai" class="nav-link">Pegawai</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/sembako" class="nav-link">Tugas CRUD - Sembako</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/karyawan" class="nav-link">Latihan UAS - Karyawan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/keranjangbelanja" class="nav-link">Latihan UAS - Keranjang Belanja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/latihan1" class="nav-link">#</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/latihan2" class="nav-link">#</a>
+                    </li>
                 </ul>
             </div>
         </div>
