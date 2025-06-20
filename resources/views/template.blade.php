@@ -223,16 +223,13 @@ tbody tr:hover {
                         <a href="/sembako" class="nav-link">Tugas CRUD - Sembako</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/karyawan" class="nav-link">Latihan UAS - Karyawan</a>
+                        <a href="/karyawan" class="nav-link">Latihan EAS - Karyawan</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/keranjangbelanja" class="nav-link">Latihan UAS - Keranjang Belanja</a>
+                        <a href="/keranjangbelanja" class="nav-link">Latihan EAS - Keranjang Belanja</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/latihan1" class="nav-link">#</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/latihan2" class="nav-link">#</a>
+                        <a href="/eas" class="nav-link">!! EAS - Nilai !!</a>
                     </li>
                 </ul>
             </div>

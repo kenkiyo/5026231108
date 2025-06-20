@@ -8,6 +8,8 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\SembakoController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\NilaiController;
+
 
 Route::get('/publishfrontend', function () {
     return view('publishfrontend');
@@ -78,5 +80,7 @@ Route::get('/keranjangbelanja/tambah', [KeranjangBelanjaController::class, 'tamb
 Route::post('/keranjangbelanja/store', [KeranjangBelanjaController::class, 'store']);
 Route::get('/keranjangbelanja/hapus/{id}', [KeranjangBelanjaController::class, 'hapus']);
 
-
-
+//CRUD Nilai
+Route::get('/eas', [NilaiController::class, 'index']);
+Route::get('/eas/tambah', [NilaiController::class, 'tambah']);
+Route::post('/eas/store', [NilaiController::class, 'store']);
